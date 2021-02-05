@@ -23,9 +23,10 @@
 
 ## :books: About
 
-Application that stores repositories of the a portfolio. It allows creating, reading, updating and removing repositories, in addition to allowing repositories to receive "likes".
 
-Backend [challenge](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-conceitos-nodejs) to improve the Node.js concepts applied in Rocketseat's GoStack Bootcamp.
+Backend [challenge](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-conceitos-nodejs) to improve the Node.js concepts (HTTP methods, parameter types and HTTP code) applied in Rocketseat's GoStack Bootcamp.
+
+Application that stores repositories of the a portfolio. It allows creating, reading, updating and removing repositories, in addition to allowing repositories to receive "likes".
 
 
 <a id="technologies"></a><br>
