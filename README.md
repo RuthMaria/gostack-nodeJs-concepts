@@ -42,7 +42,7 @@ Backend [challenge](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree
 - Clone this repository
 
 ```
-git clone https://github.com/RuthMaria/nodeJs-concepts.git
+git clone https://github.com/RuthMaria/gostack-nodeJs-concepts.git
 ```
 
 - Install dependencies
