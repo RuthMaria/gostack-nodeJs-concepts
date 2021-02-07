@@ -1,12 +1,12 @@
 const express = require("express");
-const cors = require("cors");
+const cors = require("cors"); // permite requisições de vários clientes
 
-const { v4: uuid, validate: isUuid } = require('uuid');
+const { v4: uuid, validate: isUuid } = require('uuid'); // uuid: universal unique ID
 
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors());   
 
 const repositories = [];
 
@@ -34,12 +34,20 @@ app.put("/repositories/:id", (request, response) => {
   const {id} = request.params
   const {title, url, techs} = request.body
 
-  let repository = repositories.find(repository => repository.id === id)
+  const repositoryIndex = repositories.findIndex(repository => repository.id === id)
 
-  if( !repository )
+  if( repositoryIndex < 0 )
          return response.status(400).json({error: 'Repository not found'})
 
-  repository = {...repository, title, url, techs}
+  const repository = {
+            id,
+            title, 
+            url, 
+            techs,
+            likes: repositories[repositoryIndex].likes
+  }
+
+  repositories[repositoryIndex] = repository
 
   return response.json(repository)
 
@@ -62,12 +70,13 @@ app.delete("/repositories/:id", (request, response) => {
 app.post("/repositories/:id/like", (request, response) => {
   const {id} = request.params
   
-  const repository = repositories.find(repository => repository.id === id)
+  const repositoryIndex = repositories.findIndex(repository => repository.id === id)
 
-  if(!repository)
+  if( repositoryIndex < 0 )
         return response.status(400).json({error: 'Repository not found'})
-  
-  repository.likes++
+
+  repositories[repositoryIndex].likes++
+  const repository =  repositories[repositoryIndex]
 
   return response.json(repository)
 

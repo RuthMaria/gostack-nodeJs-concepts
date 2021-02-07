@@ -54,11 +54,13 @@ yarn
 - Run the API
 
 ```
-yarn test
-```
-or 
-```
 yarn dev
+```
+
+- Run the test
+
+```
+yarn test
 ```
 
 <br>
