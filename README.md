@@ -57,7 +57,7 @@ yarn
 yarn dev
 ```
 
-- Run the test
+- Run the tests
 
 ```
 yarn test
@@ -76,7 +76,7 @@ yarn test
 
 ## :memo: License
 
-This project is under the MIT license. See the  file [LICENSE](LICENSE.md) for more details.
+This project is under the MIT license. See the  file [LICENSE](LICENSE) for more details.
 
 ---
 
